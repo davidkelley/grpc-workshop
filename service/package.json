@@ -1,0 +1,19 @@
+{
+  "name": "grpc",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "build": "grpc_tools_node_protoc --js_out=import_style=commonjs,binary:./gen --grpc_out=grpc_js:./gen service.proto",
+    "prepare": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grpc-tools": "^1.11.1"
+  },
+  "dependencies": {
+    "google-protobuf": "^3.17.0"
+  }
+}

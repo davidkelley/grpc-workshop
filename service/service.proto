@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package example;
+
+service GithubStars {
+  // retrieves stars
+  rpc GetStars (StarsRequest) returns (StarsReply) {}
+} 
+
+// the request message that is required
+message StarsRequest {
+  string username = 1;
+  string repository = 2;
+}
+
+// the reply that will be sent
+message StarsReply {
+  int32 stars = 1;
+}
